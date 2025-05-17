@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор палив</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="calculator-container">
+        <h1>Калькулятор композиції палива</h1>
+        <h2>Введіть значення: </h2>
+        <label for="carbon">Вуглець (C%)</label>
+        <input type="number" id="carbon" placeholder="Введіть Вуглець %">
+        
+        <label for="hydrogen">Водень (H%)</label>
+        <input type="number" id="hydrogen" placeholder="Введіть Водень %">
+        
+        <label for="oxygen">Оксиген (O%)</label>
+        <input type="number" id="oxygen" placeholder="Введіть Оксиген %">
+        
+        <label for="nitrogen">Нітроген (N%)</label>
+        <input type="number" id="nitrogen" placeholder="Введіть Нітроген %">
+        
+        <label for="sulfur">Сірка (S%)</label>
+        <input type="number" id="sulfur" placeholder="Введіть Сірка %">
+        
+        <label for="ash">Зола (A%)</label>
+        <input type="number" id="ash" placeholder="Введіть зола %">
+        
+        <label for="moisture">Вологість (M%)</label>
+        <input type="number" id="moisture" placeholder="Введіть вологість %">
+        
+        <button id="calculate" onclick="main();">Обчислити</button>
+    </div>
+    
+    <div class="results-container">
+        <h2>Результати</h2>
+        <p>Композиція сухої маси: <span id="dry-mass-result"></span></p>
+        <p>Композиція горючої маси: <span id="combustible-mass-result"></span></p>
+        <p>Коефіцієнт переходу від робочої до сухої маси: <span id="dry-coeff-result"></span></p>
+        <p>Коефіцієнт переходу від робочої до горючої маси: <span id="combustible-coeff-result"></span></p>
+        <p>Склад сухої маси: <span id="dry-hydrogen"></span><span id="dry-carbon"></span><span id="dry-sulfur"></span><span id="dry-nitrogen"></span><span id="dry-oxygen"></span><span id="dry-ash"></span></p>
+        <p>Склад горючої маси: <span id="comb-hydrogen"></span><span id="comb-carbon"></span><span id="comb-sulfur"></span><span id="comb-nitrogen"></span><span id="comb-oxygen"></span></p>
+        <p>Нижча теплота згоряння для робочої маси: <span id="lhv-working"></span></p>
+        <p>Нижча теплота згоряння для сухої маси: <span id="lhv-dry"></span></p>
+        <p>Нижча теплота згоряння для горючої маси: <span id="lhv-combustible"></span></p>
+    </div>
+    
+    <div class="calculator-container">
+        <h1>Калькулятор для згоряння мазуту</h1>
+        <h2>Введіть значення: </h2>
+        <label for="carbon2">Вуглець (C%)</label>
+        <input type="number" id="carbon-2" placeholder="Введіть Вуглець %">
+        
+        <label for="hydrogen2">Водень (H%)</label>
+        <input type="number" id="hydrogen-2" placeholder="Введіть Водень %">
+        
+        <label for="oxygen2">Оксиген (O%)</label>
+        <input type="number" id="oxygen-2" placeholder="Введіть Оксиген %">
+        
+        <label for="sulfur2">Сірка (S%)</label>
+        <input type="number" id="sulfur-2" placeholder="Введіть Сірка %">
+        
+        <label for="lvh-dry-mass-oil">НТЗ горючої маси мазуту (МДж/кг;)</label>
+        <input type="number" id="lvh-dry-mass-oil" placeholder="Введіть нижчу теплоту згоряння горючої маси мазуту МДж/кг">
+        
+        <label for="moisture2">Вологість робочої маси палива (M%)</label>
+        <input type="number" id="moisture2" placeholder="Введіть вологість робочої маси палива %">
+        
+        <label for="ash">Зольність сухої маси (A%)</label>
+        <input type="number" id="ash2" placeholder="Введіть зольність сухої маси %">
+        
+        <label for="vanadiy2">Ванадій (мг/кг)</label>
+        <input type="number" id="vanadiy2" placeholder="Введіть вміст ванадію мг/кг">
+        
+        <button id="calculate2" onclick="main2();">Обчислити</button>
+    </div>
+    
+    <div class="results-container">
+        <h2>Результати</h2>
+        <p>Склад робочої маси мазуту становитиме: <span id="composition-working-mass"></span></p>
+        <p>Нижча теплота згоряння мазуту на робочу масу: <span id="lhv-working-2"></span></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
